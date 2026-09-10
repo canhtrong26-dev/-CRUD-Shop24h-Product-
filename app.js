@@ -4,6 +4,7 @@ const productTypeRouter = require('./routes/productType')
 const productRouter = require('./routes/product')
 const customerRouter = require('./routes/customer')
 const orderRouter = require('./routes/order')
+const orderDetailRouter = require('./routes/orderDetail')
 
 const app = express()
 
@@ -17,6 +18,7 @@ app.use('/product-types', productTypeRouter)
 app.use('/products', productRouter)
 app.use('/customers', customerRouter)
 app.use('/', orderRouter)
+app.use('/', orderDetailRouter)
 
 app.listen(3000, () => {
     console.log('Server đang chạy tại http://localhost:3000')
