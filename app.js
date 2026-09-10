@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const productTypeRouter = require('./routes/productType')
 const productRouter = require('./routes/product')
 const customerRouter = require('./routes/customer')
+const orderRouter = require('./routes/order')
 
 const app = express()
 
@@ -15,6 +16,7 @@ mongoose.connect('mongodb://localhost:27017/shop24h')
 app.use('/product-types', productTypeRouter)
 app.use('/products', productRouter)
 app.use('/customers', customerRouter)
+app.use('/', orderRouter)
 
 app.listen(3000, () => {
     console.log('Server đang chạy tại http://localhost:3000')
