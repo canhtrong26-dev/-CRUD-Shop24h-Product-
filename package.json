@@ -4,13 +4,17 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "nodemon app.js"
+        "start": "nodemon app.js",
+        "test": "mocha --timeout 10000"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "type": "commonjs",
     "devDependencies": {
+        "chai": "^4.3.7",
+        "chai-http": "^4.4.0",
+        "mocha": "^10.2.0",
         "nodemon": "^3.1.14"
     },
     "dependencies": {
